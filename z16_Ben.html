@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sterowanie wydrukami</title>
+</head>
+<body>
+<script>
+let A = prompt('Podaj pierwszą liczbę naturalną A:');
+let B = prompt('Podaj drugą liczbę naturalną B:');
+A = parseInt(A);
+B = parseInt(B);
+if (!isNaN(A) && !isNaN(B) && A >= 0 && B >= 0) {
+    let result = Math.pow((A + B), 3);
+    let expression = `(${A} + ${B})^3 = ${A}^3 + 3*(${A}^2)*${B} + 3*${A}*(${B}^2) + ${B}^3 = ${result}`;
+    document.write(`<pre style="color: navy; font-size: 20px;">${expression}</pre>`);
+} else {
+    document.write('Podane wartości nie są liczbami naturalnymi.');
+}
+</script>
+</body>
+</html>

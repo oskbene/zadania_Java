@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KOD_z_12</title>
+</head>
+<body>
+  <textarea id="textInput" rows="10" cols="50">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ile sekund</title>
+  <script>
+    function obliczRoznice() {
+      var D1_Ben = document.getElementById("D1_Ben").value.toLowerCase(); 
+      var D2_Ben = document.getElementById("D2_Ben").value.toLowerCase(); 
+      var G1_Ben = document.getElementById("G1_Ben").value.toLowerCase(); 
+      var G2_Ben = document.getElementById("G2_Ben").value.toLowerCase(); 
+      D1_Ben = parseInt(D1_Ben);
+      D2_Ben = parseInt(D2_Ben);
+      G1_Ben = parseInt(G1_Ben);
+      G2_Ben = parseInt(G2_Ben);
+      if (isNaN(D1_Ben) || isNaN(D2_Ben) || isNaN(G1_Ben) || isNaN(G2_Ben)) {
+        alert("Wprowadź poprawne wartości!");
+        return;
+      }
+      var dateTimeD1 = new Date(2023, 0, D1_Ben, G1_Ben, 0, 0); 
+      var dateTimeD2 = new Date(2023, 0, D2_Ben, G2_Ben, 0, 0); 
+      var roznicaCzasu = Math.abs(dateTimeD2 - dateTimeD1) / 1000; 
+      var wynik = document.getElementById("wynik");
+      wynik.style.color = "green";
+      wynik.style.fontSize = "59px"; 
+      wynik.innerHTML = "Ilość sekund: " + roznicaCzasu + " sekund";
+    }
+  </script>
+</head>
+<body>
+  <h2>Obliczanie różnicy czasu między dniami i godzinami w styczniu</h2>
+  <label for="D1_Ben">Podaj pierwszy numer dnia : </label>
+  <input type="text" id="D1_Ben"><br><br>
+  <label for="D2_Ben">Podaj drugi numer dnia : </label>
+  <input type="text" id="D2_Ben"><br><br>
+  <label for="G1_Ben">Podaj pierwszą godzinę : </label>
+  <input type="text" id="G1_Ben"><br><br>
+  <label for="G2_Ben">Podaj drugą godzinę : </label>
+  <input type="text" id="G2_Ben"><br><br>
+  <button onclick="obliczRoznice()">Oblicz różnicę</button><br><br>
+  <div id="wynik"></div>
+</body>
+</html>
+</textarea>
+</body>
+</html>

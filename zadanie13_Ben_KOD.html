@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KOD_z_12</title>
+</head>
+<body>
+  <textarea id="textInput" rows="10" cols="50">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rozkład liczby na dwa ułamki egipskie</title>
+</head>
+<body>
+<script>
+let m_Ben = prompt('Wpisz liczbę całkowitą większą od zera:');
+m_Ben = parseInt(m_Ben);
+if (isNaN(m_Ben) || m_Ben <= 0) {
+  document.write('Proszę wprowadzić poprawną liczbę całkowitą większą od zera.');
+} else {
+  let pierwszyUlamek = m_Ben + 1;
+  let drugiUlamek = m_Ben * pierwszyUlamek;
+  document.write(`1/${m_Ben} = 1/${pierwszyUlamek} + 1/${drugiUlamek}`);
+}
+</script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>

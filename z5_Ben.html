@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<HTML>
+ <HEAD>
+ <meta charset="utf-8">
+ <TITLE>zadanie 4 Benert</TITLE>
+ <script language="JavaScript">
+function WinOpen_Benert_1()
+ {
+window.open("grafika1.gif","okienko_1","toolbar=no,directories=no,menubar=no,height=380,width=160,top=4000,left=10");
+ }
+function WinOpen_Benert_2()
+ {
+window.open("grafika2.gif","okienko_2","toolbar=no,directories=no,menubar=no,height=380,width=160,top=10,left=4000");
+ }
+function WinOpen_Benert_3()
+{
+window.open("grafika3.gif","okienko_3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=1200,left=2000");
+ }
+function WinOpen_Benert_4()
+{
+window.open("grafika4.gif","okienko_4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=10,left=10");
+ }
+function okno_zamknij()
+ {
+ window.close()
+ }
+
+</script>
+ </HEAD>
+<BODY>
+<p style="font-size: 2cm"><font color="red">wykonał: Oskar Benert mój numer w dzienniku 4, mam układ [(4) mod 4=2] układ drugi </p></font>
+<form>
+ <input type="button_grafika1" name="grafika1" value="Grafika1" onclick="WinOpen_Benert_1(' ')">
+ <input type="button_grafika2" name="grafika2" value="Grafika2" onclick="WinOpen_Benert_2(' ')">
+ <input type="button_grafika3" name="grafika3" value="Grafika3" onclick="WinOpen_Benert_3(' ')">
+ <input type="button_grafika4" name="grafika4" value="Grafika4" onclick="WinOpen_Benert_4(' ')">
+ <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+ </form>
+</BODY>
+</HTML>

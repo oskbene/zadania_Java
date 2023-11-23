@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Z11_KOD</title>
+</head>
+<body>
+<textarea id="textInput" name="zawartoscTextarea" rows="10" cols="50">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ile sekund</title>
+  <script>
+    function obliczRoznice() {
+      var D1_Ben = document.getElementById("D1_Ben").value.toLowerCase(); 
+      var D2_Ben = document.getElementById("D2_Ben").value.toLowerCase(); 
+      D1_Ben = parseInt(D1_Ben);
+      D2_Ben = parseInt(D2_Ben);
+      if (isNaN(D1_Ben) || isNaN(D2_Ben)) {
+        alert("Wprowadź poprawne numery dni!");
+        return;
+      }
+      var północD1 = new Date(2023, 0, D1_Ben, 0, 0, 0); 
+      var północD2 = new Date(2023, 0, D2_Ben, 0, 0, 0); 
+      var roznicaCzasu = Math.abs(północD2 - północD1) / 1000; 
+      var wynik = document.getElementById("wynik");
+      wynik.style.color = "green";
+      wynik.style.fontSize = "59px"; 
+      wynik.innerHTML = "Różnica czasu między dniami: " + roznicaCzasu + " sekund";
+    }
+  </script>
+</head>
+<body>
+  <h2>Obliczanie różnicy czasu między dniami w styczniu</h2>
+  <label for="D1_Ben">Podaj pierwszy numer dnia : </label>
+  <input type="text" id="D1_Ben"><br><br>
+  <label for="D2_Ben">Podaj drugi numer dnia : </label>
+  <input type="text" id="D2_Ben"><br><br>
+  <button onclick="obliczRoznice()">Oblicz różnicę</button><br><br>
+  <div id="wynik"></div>
+</body>
+</html>
+</textarea>
+</body>
+</html>
